@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta http-equiv="Content-Type"
+        content="text/html; charset=utf-8">
+        <title>Главная</title>
+        </head>
+        <body>
+            <h1> Welcome {{user.first_name}} </h1>
+            <a href="/accounts/logout/">Log Out</a>
+            <a href="{% url 'sign-up' %}">Sign Up</a>
+            {% for todo in todos %}
+            <div>
+                <h2>{{ todo.name }}</h2>
+                <p>{{ todo.text }}</p>
+            </div>
+            {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<h1> Welcome {{user.first_name}} </h1>
+{% for todo in todos %}
+<div>
+    <h2>{{ todo.name }}</h2>
+    <p>{{ todo.text }}</p>
+</div>
